@@ -22,7 +22,7 @@ class Solution_Question_1:
 	for i, num in enumerate(nums):
 		n = target - num
 		if n in nums:
-			retuen [h[n], i}
+			retuen [h[n], i]
 		else:
 			raise ValueError("Value wasn't found")
 
