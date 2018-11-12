@@ -17,18 +17,20 @@ class Solution:
             :type nums: List[int]
             :type target: int
             :rtype: List[int]
-            """
-        h = {}
+        """
+        self.nums = nums
+        self.target = target
+        self.final_list = []
         for i, num in enumerate(nums):
-            n = target - num
-            if n not in h:
-                raise ValueError("The value wan't found!")
-            else:
-                print [h[n], i]
+            n = abs(self.target - num)
+            if n in self.nums:
+                self.final_list.append((self.nums).index(num))
+
+        print(self.final_list)
 
 
-test_1  = Solution()
-test_1.twoSum([1, 2, 10, 42], 43)
+example_1 = Solution()
+example_1.twoSum([1, 4, 15, 3], 7)
 
 
 
