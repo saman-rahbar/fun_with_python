@@ -11,26 +11,23 @@ You may assume that each input would have exactly one solution, and you may not 
  
 #Solution_Question_1:
 
-class Solution_Question_1:
-
+class Solution:
     def twoSum(self, nums, target):
-    
         """
-        :type nums: List[int]
-        :type target: int
-        :rtype: List[int]
-        """
-    
+            :type nums: List[int]
+            :type target: int
+            :rtype: List[int]
+            """
         h = {}
-	for i, num in enumerate(nums):
+        for i, num in enumerate(nums):
             n = target - num
-            if n in nums:
-                return [h[n], i]
+            if n not in h:
+                raise ValueError("The value wan't found!")
             else:
-                raise ValueError("Value wasn't found")
+                print [h[n], i]
 
 
-test_1  = Solution_Question_1()
+test_1  = Solution()
 test_1.twoSum([1, 2, 10, 42], 43)
 
 
